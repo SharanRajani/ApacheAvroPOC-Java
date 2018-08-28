@@ -1,0 +1,24 @@
+EmployeeID,Start Time,End Date,End Time,Event Title ,All Day Event,No End Time,Event Description
+2,3:00:00 PM,9/5/2011,7:00:00 PM,Social Studies Dept. Meeting,N,Y,Department meeting
+3,4:00:00 PM,9/5/2012,8:00:00 PM,Social Studies Dept. Meeting,N,N,Curriculum Meeting
+4,5:00:00 PM,9/5/2013,9:00:00 PM,Social Studies Dept. Meeting,Y,Y,Department meeting
+5,6:00:00 PM,9/5/2014,10:00:00 PM,Social Studies Dept. Meeting,N,N,Curriculum Meeting
+6,7:00:00 PM,9/5/2015,11:00:00 PM,Social Studies Dept. Meeting,N,Y,Department meeting
+7,8:00:00 PM,9/5/2016,12:00:00 PM,Social Studies Dept. Meeting,Y,N,Curriculum Meeting
+8,9:00:00 PM,9/5/2017,13:00:00 PM,Social Studies Dept. Meeting,N,Y,Department meeting
+9,10:00:00 PM,9/5/2018,14:00:00 PM,Social Studies Dept. Meeting,N,N,Curriculum Meeting
+10,11:00:00 PM,9/5/2019,15:00:00 PM,Social Studies Dept. Meeting,Y,Y,Department meeting
+11,12:00:00 PM,9/5/2020,16:00:00 PM,Social Studies Dept. Meeting,N,N,Curriculum Meeting
+12,13:00:00 PM,9/5/2021,17:00:00 PM,Social Studies Dept. Meeting,N,Y,Department meeting
+13,14:00:00 PM,9/5/2022,18:00:00 PM,Social Studies Dept. Meeting,Y,N,Curriculum Meeting
+14,15:00:00 PM,9/5/2023,19:00:00 PM,Social Studies Dept. Meeting,N,Y,Department meeting
+15,16:00:00 PM,9/5/2024,20:00:00 PM,Social Studies Dept. Meeting,N,N,Curriculum Meeting
+16,17:00:00 PM,9/5/2025,21:00:00 PM,Social Studies Dept. Meeting,Y,Y,Department meeting
+17,18:00:00 PM,9/5/2026,22:00:00 PM,Social Studies Dept. Meeting,N,N,Curriculum Meeting
+18,19:00:00 PM,9/5/2027,23:00:00 PM,Social Studies Dept. Meeting,N,Y,Department meeting
+19,20:00:00 PM,9/5/2028,24:00:00 PM,Social Studies Dept. Meeting,Y,N,Curriculum Meeting
+20,21:00:00 PM,9/5/2029,25:00:00 PM,Social Studies Dept. Meeting,N,Y,Department meeting
+21,22:00:00 PM,9/5/2030,26:00:00 PM,Social Studies Dept. Meeting,N,N,Curriculum Meeting
+22,23:00:00 PM,9/5/2031,27:00:00 PM,Social Studies Dept. Meeting,Y,Y,Department meeting
+23,24:00:00 PM,9/5/2032,28:00:00 PM,Social Studies Dept. Meeting,N,N,Curriculum Meeting
+24,25:00:00 PM,9/5/2033,29:00:00 PM,Social Studies Dept. Meeting,N,Y,Department meeting
