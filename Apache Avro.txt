@@ -1,0 +1,60 @@
+Data serialization is a mechanism to translate data in computer environment (like memory buffer, data structures or object state) into binary or textual form that can be transported over network or stored in some persistent storage media.
+
+Apache Avro is a language-neutral data serialization system.
+Since Hadoop writable classes lack language portability
+
+Avro serializes the data which has a built-in schema.
+
+How to use Avro?
+To use Avro, you need to follow the given workflow −
+
+Step 1 − Create schemas. Here you need to design Avro schema according to your data.
+
+Step 2 − Read the schemas into your program. It is done in two ways −
+
+By Generating a Class Corresponding to Schema − Compile the schema using Avro. This generates a class file corresponding to the schema
+
+By Using Parsers Library − You can directly read the schema using parsers library.
+
+Step 3 − Serialize the data using the serialization API provided for Avro, which is found in the package org.apache.avro.specific.
+
+Step 4 − Deserialize the data using deserialization API provided for Avro, which is found in the package org.apache.avro.specific.
+
+Serializing
+Now let's serialize our Users to disk.
+
+// Serialize user1, user2 and user3 to disk
+DatumWriter<User> userDatumWriter = new SpecificDatumWriter<User>(User.class);
+DataFileWriter<User> dataFileWriter = new DataFileWriter<User>(userDatumWriter);
+dataFileWriter.create(user1.getSchema(), new File("users.avro"));
+dataFileWriter.append(user1);
+dataFileWriter.append(user2);
+dataFileWriter.append(user3);
+dataFileWriter.close();
+      
+We create a DatumWriter, which converts Java objects into an in-memory serialized format. The SpecificDatumWriter class is used with generated classes and extracts the schema from the specified generated type.
+
+Next we create a DataFileWriter, which writes the serialized records, as well as the schema, to the file specified in the dataFileWriter.create call. We write our users to the file via calls to the dataFileWriter.append method. When we are done writing, we close the data file.
+
+Deserializing
+Finally, let's deserialize the data file we just created.
+
+// Deserialize Users from disk
+DatumReader<User> userDatumReader = new SpecificDatumReader<User>(User.class);
+DataFileReader<User> dataFileReader = new DataFileReader<User>(file, userDatumReader);
+User user = null;
+while (dataFileReader.hasNext()) {
+// Reuse user object by passing it to next(). This saves us from
+// allocating and garbage collecting many objects for files with
+// many items.
+user = dataFileReader.next(user);
+System.out.println(user);
+}
+        
+This snippet will output:
+
+{"name": "Alyssa", "favorite_number": 256, "favorite_color": null}
+{"name": "Ben", "favorite_number": 7, "favorite_color": "red"}
+{"name": "Charlie", "favorite_number": null, "favorite_color": "blue"}
+        
+Deserializing is very similar to serializing. We create a SpecificDatumReader, analogous to the SpecificDatumWriter we used in serialization, which converts in-memory serialized items into instances of our generated class, in this case User. We pass the DatumReader and the previously created File to a DataFileReader, analogous to the DataFileWriter, which reads the data file on disk.
